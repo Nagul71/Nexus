@@ -1,0 +1,18 @@
+.dash {
+    display: flex;
+    gap: 50px;
+    padding-top: 20px;
+    height: 100%;
+
+    .menu {
+       flex: 1;
+    }
+
+    .content {
+      flex: 6;
+      background-color: #212121;
+      height: 100%;
+    }
+  } 
+
+  
