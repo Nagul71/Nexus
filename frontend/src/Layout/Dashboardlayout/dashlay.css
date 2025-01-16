@@ -3,6 +3,7 @@
     gap: 50px;
     padding-top: 20px;
     height: 100%;
+    width: 100%;
 
     .menu {
        flex: 1;
@@ -12,6 +13,7 @@
       flex: 6;
       background-color: #212121;
       height: 100%;
+      border-radius: 20px;
     }
   } 
 
