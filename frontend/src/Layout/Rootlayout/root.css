@@ -1,49 +1,29 @@
-.root{
-    padding: 19px 30px;
+.root {
+    padding: 16px 64px;
     height: 100vh;
     display: flex;
     flex-direction: column;
-
-    header{
+  
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      .logo {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-
-
-        span{
-            font-size: 20px;
-            font-weight: bold;
+        font-weight: bold;
+        gap: 8px;
+  
+        img {
+          width: 32px;
+          height: 32px;
         }
-
-
-        .user{
-            font-size: 20px;
-        }
-
-
-
-        .logo{
-            align-items: center;
-            gap: 8px;
-            display: flex;
-            padding-bottom: 20px;
-        }
-
-
-
-        img{
-            width: 42px;
-            height: 42px;
-        }
-
-
-
-        
+      }
     }
-
-    main{
-        flex: 1;
-
+  
+    main {
+      flex: 1;
+      overflow: hidden;
     }
-
-}
+  }

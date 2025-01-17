@@ -20,11 +20,10 @@ const router = createBrowserRouter([
       {path:'/sign-up/*',element:<Signup/>},
       {path:'/sign-in/*',element:<Signin/>},
       {
-        path: '/dashboard',
         element: <Dashlay />,
         children: [
-          { path: '', element: <Dashboard /> }, // Matches '/dashboard'
-          { path: 'chat/:id', element: <Chat /> }, // Matches '/dashboard/chat/:id'
+          { path: '/dashboard', element: <Dashboard /> }, // Matches '/dashboard'
+          { path: '/dashboard/chats/:id', element: <Chat /> }, // Matches '/dashboard/chat/:id'
         ],
       }
 
