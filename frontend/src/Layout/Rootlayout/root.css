@@ -14,10 +14,14 @@
         align-items: center;
         font-weight: bold;
         gap: 8px;
+
+      span{
+        font-size: 20px;
+      }
   
         img {
-          width: 32px;
-          height: 32px;
+          width: 42px;
+          height: 42px;
         }
       }
     }

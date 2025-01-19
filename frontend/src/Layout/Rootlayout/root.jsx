@@ -27,7 +27,7 @@ function root() {
     <div className='root'>
     <header>
         <Link to ='/'className='logo'>  
-        <img src="/assets/logo.png"/>
+        <img src="/assets/imglogo.png"/>
         <span>NEXUS AI</span>   
         </Link>
         <div className="user">
