@@ -9,6 +9,7 @@ import Chat from './pages/Chat/Chat'
 import Dashlay from './Layout/Dashboardlayout/Dashlay'
 import Signup from './pages/Signup/Signup';
 import Signin from './pages/Signin/Signin';
+import Price from './pages/pricetag/price';
 
 const router = createBrowserRouter([
   {
@@ -19,11 +20,13 @@ const router = createBrowserRouter([
       {path:'/',element:<Home/>},
       {path:'/sign-up/*',element:<Signup/>},
       {path:'/sign-in/*',element:<Signin/>},
+      {path:'/price',element:<Price/>},
       {
         element: <Dashlay />,
         children: [
           { path: '/dashboard', element: <Dashboard /> }, // Matches '/dashboard'
-          { path: '/dashboard/chats/:id', element: <Chat /> }, // Matches '/dashboard/chat/:id'
+          { path: '/dashboard/chats/:id', element: <Chat /> },// Matches '/dashboard/chat/:id'
+  
         ],
       }
 

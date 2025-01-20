@@ -36,7 +36,7 @@ const Dashboard = () => {
     <div className="Dashboard">
       <div className="texts">
         <div className="logo">
-          <img src="assets\logo.png" alt="" />
+          <img src="/assets/imglogo.png" alt="" />
           <h1>NEXUS AI</h1>
         </div>
         <div className="help">What Can I help With?</div>

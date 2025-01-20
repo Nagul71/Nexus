@@ -34,10 +34,12 @@ function ChatList() {
       <hr />
       <div className="upgrade">
         <img src="/assets/logo.png" alt="" />
+        <Link to ='/price'>
         <div className="texts">
           <span>Upgrade to Nexus AI Pro</span>
           <span>Get unlimited access to all features</span>
         </div>
+        </Link>
       </div>
     </div>
   </>

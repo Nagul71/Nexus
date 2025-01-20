@@ -1,0 +1,226 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 200px; /* Added padding at bottom of container */
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+  }
+  
+  .header h1 {
+    font-size: 48px;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #fff 0%, #888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+  }
+  
+  .header h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #555 0%, #333 100%);
+    border-radius: 2px;
+  }
+  
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    padding: 20px;
+    perspective: 1000px;
+    margin-bottom: 40px; /* Added margin at bottom of grid */
+  }
+  
+  .pricing-card {
+    background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 600px; /* Added minimum height to cards */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pricing-card:hover {
+    transform: translateY(-5px) rotateX(2deg);
+    border-color: #3a3a3a;
+  }
+  
+  .pricing-card.popular {
+    background: linear-gradient(145deg, #1a1a1a, #151515);
+    border: 1px solid #444;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .pricing-card.popular::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #666 0%, #444 100%);
+  }
+  
+  .plan-name {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+  }
+  
+  .popular .plan-name::after {
+    content: '★';
+    font-size: 20px;
+    color: #666;
+  }
+  
+  .price {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  
+  .currency {
+    font-size: 24px;
+    font-weight: 500;
+    color: #888;
+  }
+  
+  .amount {
+    font-size: 54px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fff 0%, #888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 4px;
+  }
+  
+  .period {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .description {
+    color: #999;
+    margin-bottom: 32px;
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 48px;
+  }
+  
+  .cta-button {
+    background: transparent;
+    color: white;
+    border: 1px solid #333;
+    padding: 14px;
+    border-radius: 12px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 32px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: 0.5s;
+  }
+  
+  .cta-button:hover::before {
+    left: 100%;
+  }
+  
+  .popular .cta-button {
+    background: linear-gradient(90deg, #444 0%, #333 100%);
+    border: none;
+  }
+  
+  .features {
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 40px; /* Added margin below features list */
+    flex-grow: 1; /* Allow features to take up remaining space */
+  }
+  
+  .feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+    color: #888;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .checkmark {
+    color: #666;
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  
+  .popular .checkmark {
+    color: #888;
+  }
+  
+  .footer-text {
+    color: #666;
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 20px; /* Added padding at bottom of footer */
+  }
+  
+  .footer-text a {
+    color: #888;
+    text-decoration: none;
+    border-bottom: 1px dotted #444;
+  }
+  
+  .footer-text a:hover {
+    color: #aaa;
+  }
+  
+  @media (max-width: 768px) {
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      padding: 10px;
+    }
+    
+    .header h1 {
+      font-size: 36px;
+    }
+    
+    .pricing-card {
+      min-height: auto; /* Allow cards to grow based on content on mobile */
+      margin-bottom: 20px; /* Add space between cards on mobile */
+    }
+  }
