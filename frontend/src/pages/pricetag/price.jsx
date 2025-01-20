@@ -5,7 +5,8 @@ function price() {
   <div className="container">
     <div className="header">
       <h1>Choose Your Plan</h1>
-    </div>
+      </div>
+    
 
     <div className="pricing-grid">
       {/* <!-- Basic Tier --> */}

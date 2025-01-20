@@ -30,6 +30,7 @@
   
     main {
       flex: 1;
-      overflow: hidden;
+      overflow-y: hidden;
+      overflow-x: hidden;
     }
   }

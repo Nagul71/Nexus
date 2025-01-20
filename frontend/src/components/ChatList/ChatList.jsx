@@ -33,7 +33,7 @@ function ChatList() {
       </div>
       <hr />
       <div className="upgrade">
-        <img src="/assets/logo.png" alt="" />
+        <img src="/assets/imglogo.png" alt="" />
         <Link to ='/price'>
         <div className="texts">
           <span>Upgrade to Nexus AI Pro</span>

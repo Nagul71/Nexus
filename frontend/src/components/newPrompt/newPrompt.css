@@ -1,6 +1,7 @@
 .endChat{
     padding-bottom: 100px;
   }
+
     .newForm{
       width: 50%;
       position: absolute;
@@ -38,3 +39,14 @@
         }
       }
     }
+
+    
+    
+    .message-avatar img {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      padding: 2px;
+      background-color: #212121;
+    }
+    

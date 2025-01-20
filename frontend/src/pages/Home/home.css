@@ -414,3 +414,102 @@
       transform: translateX(-50%);
     }
   }
+
+/* Existing styles are retained */
+
+/* Additional styles for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .homepage {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .left {
+    h1 {
+      font-size: 48px;
+    }
+    h3 {
+      font-size: 14px;
+      padding: 0 10px;
+    }
+    a {
+      padding: 12px 20px;
+      font-size: 12px;
+    }
+  }
+
+  .right {
+    height: auto;
+  }
+
+  .imgContainer {
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  .bgContainer .bg {
+    width: 150%;
+    height: auto;
+  }
+
+  .chat {
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .chat img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .device {
+    transform: none;
+    width: 280px;
+    height: 500px;
+  }
+
+  .device-shadow {
+    display: none;
+  }
+
+  .spec-item {
+    display: none;
+  }
+
+  .typing-indicator {
+    padding: 8px 16px;
+  }
+
+  .typing-indicator span {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .homepage {
+    padding: 10px;
+  }
+
+  .left {
+    h1 {
+      font-size: 36px;
+    }
+    h3 {
+      font-size: 12px;
+    }
+  }
+
+  .device {
+    width: 240px;
+    height: 450px;
+  }
+
+  .chat {
+    display: none;
+  }
+}

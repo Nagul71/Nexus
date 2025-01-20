@@ -10,6 +10,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-bottom: 16px;
     overflow-y: scroll; /* Enable vertical scrolling */
     overflow-x: hidden; /* Prevent horizontal scrolling */
 
