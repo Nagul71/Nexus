@@ -148,6 +148,42 @@ app.get("/api/chats/:id", ClerkExpressRequireAuth(), async (req, res) => {
       res.status(500).send("Error adding conversation!");
     }
   });
+
+  app.delete("/api/userchats/:id", ClerkExpressRequireAuth(), async (req, res) => {
+    const userId = req.auth.userId;
+    const chatId = req.params.id;
+  
+    try {
+      // Delete from Chat collection
+      const deletedChat = await Chat.findOneAndDelete({
+        _id: chatId,
+        userId: userId
+      });
+  
+      if (!deletedChat) {
+        return res.status(404).send("Chat not found or unauthorized");
+      }
+  
+      // Remove chat reference from UserChats collection
+      const updatedUserChats = await UserChats.updateOne(
+        { userId: userId },
+        {
+          $pull: {
+            chats: { _id: chatId }
+          }
+        }
+      );
+  
+      if (updatedUserChats.modifiedCount === 0) {
+        return res.status(404).send("UserChats not found");
+      }
+  
+      res.status(200).send("Chat deleted successfully");
+    } catch (error) {
+      console.log(error);
+      res.status(500).send("Error deleting chat");
+    }
+  });
   
 
 app.use((err, req, res, next) => {

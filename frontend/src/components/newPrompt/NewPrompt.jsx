@@ -17,20 +17,15 @@ function NewPrompt({ data }) {
   });
 
   const chat = model.startChat({
-    history: [
-      {
-        role: "user",
-        parts: [{ text: "Hello" }],
-      },
-      {
-        role: "model",
-        parts: [{ text: "Great to meet you. What would you like to know?" }],
-      },
-    ],
-    generateConfig: {
-      //maxOutputTokens: 100,
-    }
+    history: data?.history?.map(({ role, parts }) => ({
+      role,
+      parts: [{ text: parts[0]?.text || "" }], // Ensure parts[0] exists and has a text value
+    })) || [], // Default to an empty array if data.history is undefined
+    generationConfig: {
+      // maxOutputTokens: 100,
+    },
   });
+  
 
   const endRef = useRef(null);
   const formRef = useRef(null);

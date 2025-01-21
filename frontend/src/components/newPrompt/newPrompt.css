@@ -1,52 +1,160 @@
-.endChat{
-    padding-bottom: 100px;
+.endChat {
+  padding-bottom: 100px;
+}
+
+form {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.newForm {
+  width: 90%;
+  max-width: 650px;
+  position: absolute;
+  bottom: 0;
+  background-color: #2f2f2f;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0px 20px;
+}
+
+.newForm input {
+  flex: 1;
+  padding: 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #ececec;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.newForm input::placeholder {
+  color: #9ca3af;  /* Light gray color for better visibility */
+  opacity: 0.8;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.newForm button,
+.newForm label {
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.newForm button img,
+.newForm label img {
+  width: 16px;
+  height: 16px;
+}
+
+.message-avatar img {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  padding: 2px;
+  background-color: #1d1d1d;
+  border-color: whitesmoke;
+}
+
+/* Media Queries for Mobile Devices */
+@media screen and (max-width: 768px) {
+  .newForm {
+    width: 90%;
+    max-width: 350px;
+    gap: 10px;
+    padding: 0 10px;
+    padding-right: 20px;
+    margin: 0 auto;
+              
   }
 
-    .newForm{
-      width: 50%;
-      position: absolute;
-      bottom: 0;
-      background-color: #2f2f2f;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 0px 20px;
-  
-  
-      input{
-        flex:1;
-        padding:20px;
-        border: none;
-        outline: none;
-        background-color: transparent;
-        color: #ececec;
-      }
-  
-      button,label{
-        border-radius: 50%;
-        background-color: white;
-        border: none;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-  
-        img{
-          width: 16px;
-          height: 16px;
-        }
-      }
-    }
+  .newForm input {
+    padding: 15px;
+    font-size: 14px;
+    min-width: 0;
+  }
 
-    
-    
-    .message-avatar img {
-      width: 32px;
-      height: 32px;
-      border-radius: 6px;
-      padding: 2px;
-      background-color: #212121;
-    }
-    
+  .newForm input::placeholder {
+    font-size: 14px;
+  }
+
+  .newForm button,
+  .newForm label {
+    padding: 8px;
+    min-width: 32px;
+    min-height: 32px;
+  }
+
+  .newForm button img,
+  .newForm label img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .message {
+    padding: 10px;
+    margin: 5px 0;
+  }
+
+  .message-avatar img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .newForm {
+    width: 90%;
+    max-width: 150px;
+    border-radius: 15px;
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .newForm input {
+    padding: 12px 8px;
+    font-size: 13px;
+    width: 0;
+    min-width: 0;
+  }
+
+  .newForm input::placeholder {
+    font-size: 13px;
+  }
+
+  .newForm button,
+  .newForm label {
+    padding: 6px;
+    min-width: 28px;
+    min-height: 28px;
+  }
+
+  .newForm button img,
+  .newForm label img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .endChat {
+    padding-bottom: 80px;
+  }
+}

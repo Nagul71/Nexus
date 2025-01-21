@@ -29,7 +29,14 @@ function Dashlay() {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
-    if (!isLoaded) return <div>Loading...</div>;
+    if (!isLoaded) return <div class="loader-container">
+    <div class="loader">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+  ;
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);

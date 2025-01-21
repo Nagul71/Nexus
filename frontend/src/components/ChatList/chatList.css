@@ -89,3 +89,66 @@
       }
     }
   }
+
+.chatList {
+  padding: 20px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.list-item:hover {
+  background-color: #f3f4f6;
+}
+
+.list-item-link {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+}
+
+.more-button {
+  padding: 4px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.more-button:hover {
+  background-color: #e5e7eb;
+}
+
+.context-menu {
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 4px 0;
+  z-index: 50;
+}
+
+.delete-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #dc2626;
+}
+
+.delete-button:hover {
+  background-color: #f3f4f6;
+}
+
+.delete-button svg {
+  margin-right: 8px;
+}
