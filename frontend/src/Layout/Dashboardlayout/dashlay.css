@@ -1,20 +1,89 @@
 .dash {
-    display: flex;
-    gap: 50px;
-    padding-top: 20px;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  gap: 50px;
+  padding-top: 20px;
+  height: 100%;
+  width: 100%;
+}
 
-    .menu {
-       flex: 1;
-    }
+.menu {
+  flex: 1;
+  background-color: #171717;  /* Semi-transparent dark background */
+  color: white;
+  transition: transform 0.3s ease-in-out;
+  backdrop-filter: blur(8px);  /* Adds blur effect to background */
+}
 
-    .content {
-      flex: 6;
-      background-color: #212121;
-      height: 100%;
-      border-radius: 20px;
-    }
-  } 
+.content {
+  flex: 6;
+  background-color: #212121;
+  height: 100%;
+  border-radius: 20px;
+}
 
-  
+.mobile-menu-toggle {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background-color: #212121;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+.overlay.active {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .dash {
+      gap: 0;
+  }
+
+  .mobile-menu-toggle {
+      display: block;
+  }
+
+  .mobile-menu-toggle.hidden {
+      opacity: 0;
+      pointer-events: none;
+  }
+
+  .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 250px;
+      transform: translateX(-100%);
+      z-index: 999;
+      background-color: rgba(51, 51, 51, 0.6);
+      backdrop-filter: blur(8px);
+  }
+
+  .menu.menu-open {
+      transform: translateX(0);
+  }
+
+  .content {
+      flex: 1;
+      width: 100%;
+  }
+}
