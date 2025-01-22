@@ -7,7 +7,7 @@ import './home.css';
 
 function Home() {
   const test = async () => {
-    await fetch("http://localhost:3000/api/test", {
+    await fetch(`${VITE_API_URL}/api/test`, {
       credentials: "include",
     });
   };
