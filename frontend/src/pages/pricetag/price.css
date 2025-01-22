@@ -3,7 +3,6 @@ html, body {
   height: auto;
   margin: 0;
   padding: 0;
-  overflow-y: auto;
   overflow-x: hidden;
 }
 
@@ -302,13 +301,11 @@ html, body {
   box-sizing: border-box;
   /* Remove min-height to work with root layout */
   height: 100%;
-  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 /* Add this class to your pricing page wrapper */
 .pricing-page {
   height: 100%;
-  overflow-y: auto;
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
   padding-bottom: 40px; /* Add some bottom padding for content */
 }
