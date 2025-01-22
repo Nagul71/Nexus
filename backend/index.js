@@ -1,6 +1,8 @@
 import express from "express"
 import ImageKit from "imagekit";
 import cors from "cors";
+import path from "path";
+import url, { fileURLToPath } from "url";
 import mongoose from "mongoose";
 import UserChats from './Schema/userchat.js'
 import Chat from "./Schema/aichat.js"
@@ -154,6 +156,12 @@ app.use((err, req, res, next) => {
     console.error(err.stack)
     res.status(401).send('Unauthenticated!')
   })
+
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
+});
 
 app.listen(port,()=>{
     connect()
