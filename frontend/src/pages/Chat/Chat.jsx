@@ -1,7 +1,7 @@
 import React from 'react'
 import './chat.css'
 import NewPrompt from '../../components/newPrompt/NewPrompt'
-import { useQuery } from 'react-query'
+import { useQuery } from "@tanstack/react-query";
 import { useLocation } from 'react-router-dom'
 import { IKImage } from 'imagekitio-react'
 import Markdown from "react-markdown"
@@ -17,6 +17,8 @@ function Chat() {
         credentials: "include",
       }).then((res) => res.json()),
   });
+
+  console.log(data);
 
   return (
     <div className="chatPage">

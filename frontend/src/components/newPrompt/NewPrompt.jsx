@@ -4,7 +4,7 @@ import Upload from '../upload/Upload';
 import { IKImage } from 'imagekitio-react';
 import Markdown from "react-markdown";
 import model from '../../AI/gemini';
-import { useMutation, useQueryClient } from 'react-query';
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 function NewPrompt({ data }) {
   const [question, setQuestion] = useState("");
@@ -46,7 +46,7 @@ function NewPrompt({ data }) {
         },
         body: JSON.stringify({
           question: question.length ? question : undefined,
-          answer: answer,
+          answer,
           img: img.dbData?.filePath || undefined,
         }),
       }).then((res) => res.json());
