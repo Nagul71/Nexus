@@ -11,8 +11,9 @@ const port = process.env.PORT || 3000
 const app = express();
 
 app.use(cors({
-    origin:process.env.CLIENT_URL,
-    credentials:true,  
+  origin: 'https://nexus-v5el.vercel.app', // Replace with your frontend's deployed URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true // If you're using cookies or authentication headers
 }));
 
 app.use(express.json())
