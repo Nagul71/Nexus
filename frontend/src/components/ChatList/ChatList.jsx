@@ -11,6 +11,7 @@ function ChatList() {
         credentials: "include",
       }).then((res) => res.json()),
   });
+  console.log(import.meta.env.VITE_API_URL);
 
   return <>
   <div className="chatList">
