@@ -11,25 +11,25 @@
     display: flex;
     justify-content: center;
     padding-bottom: 16px;
-    overflow-y: scroll; /* Enable vertical scrolling */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: scroll;
+    overflow-x: hidden;
 
     /* Scrollbar styling for Chrome, Edge, Safari */
     &::-webkit-scrollbar {
-      width: 6px; /* Width of the scrollbar */
+      width: 6px;
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: #2f2f2f; /* Color of the scrollbar thumb */
-      border-radius: 10px; /* Rounded edges for the scrollbar thumb */
+      background-color: #2f2f2f;
+      border-radius: 10px;
     }
 
     &::-webkit-scrollbar-thumb:hover {
-      background-color: #555; /* Darker color when hovered */
+      background-color: #555;
     }
 
     &::-webkit-scrollbar-button {
-      display:none /* Hide up and down arrows */
+      display: none;
     }
 
     &::-webkit-scrollbar-track {
@@ -37,12 +37,12 @@
     }
 
     /* Scrollbar styling for Firefox */
-    scrollbar-width: thin; /* Thin scrollbar */
-    scrollbar-color: #2f2f2f transparent; /* Thumb and track colors */
+    scrollbar-width: thin;
+    scrollbar-color: #2f2f2f transparent;
 
     .chat {
       width: 50%;
-      display: flex;
+      display: inline-flex;
       flex-direction: column;
       gap: 20px;
 
@@ -60,6 +60,93 @@
           max-width: 80%;
           align-self: flex-end;
           margin-top: 25px;
+        }
+      }
+    }
+  }
+}
+
+/* Tablet devices */
+@media screen and (max-width: 1024px) {
+  .chatPage {
+    .wrapper {
+      .chat {
+        width: 70%; /* Increase width for better readability on tablets */
+        
+        .message {
+          padding: 16px; /* Slightly reduced padding */
+          
+          &.user {
+            max-width: 85%; /* Slightly wider messages */
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+  .chatPage {
+    .wrapper {
+      padding-bottom: 12px;
+      padding-left: 12px;
+      padding-right: 12px;
+
+      .chat {
+        width: 100%; /* Full width for mobile */
+        gap: 16px; /* Reduced gap between messages */
+
+        p,
+        li {
+          margin: 8px 0px; /* Reduced margins */
+        }
+
+        .message {
+          padding: 14px; /* Smaller padding for mobile */
+          font-size: 0.95rem; /* Slightly smaller font size */
+
+          &.user {
+            max-width: 90%; /* Wider messages on mobile */
+            margin-top: 20px; /* Reduced top margin */
+          }
+
+          /* Handle long words and URLs */
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          -webkit-hyphens: auto;
+          -ms-hyphens: auto;
+          hyphens: auto;
+        }
+      }
+
+      /* Adjust scrollbar for touch devices */
+      &::-webkit-scrollbar {
+        width: 4px; /* Thinner scrollbar for mobile */
+      }
+    }
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .chatPage {
+    .wrapper {
+      padding-bottom: 8px;
+      padding-left: 8px;
+      padding-right: 8px;
+
+      .chat {
+        gap: 12px; /* Further reduced gap */
+
+        .message {
+          padding: 12px; /* Smaller padding */
+          font-size: 0.9rem; /* Smaller font size */
+
+          &.user {
+            max-width: 95%; /* Almost full width on very small screens */
+            margin-top: 16px;
+          }
         }
       }
     }

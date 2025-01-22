@@ -2,6 +2,7 @@ import React from 'react'
 import './price.css'
 function price() {
   return <>
+  <div className='pricing-page'>
   <div className="container">
     <div className="header">
       <h1>Choose Your Plan</h1>
@@ -113,6 +114,7 @@ function price() {
         </ul>
       </div>
     </div>
+  </div>
   </div>
   </>
 }

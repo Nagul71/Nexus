@@ -1,36 +1,101 @@
 .root {
-    padding-top: 16px;
-    padding-left: 64px;
-    padding-right: 64px;
-    height: 100vh;
+  padding-top: 16px;
+  padding-left: 64px;
+  padding-right: 64px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  header {
     display: flex;
-    flex-direction: column;
-  
-    header {
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-  
-      .logo {
-        display: flex;
-        align-items: center;
-        font-weight: bold;
-        gap: 8px;
+      font-weight: bold;
+      gap: 8px;
 
-      span{
+      span {
         font-size: 20px;
       }
-  
+
+      img {
+        width: 42px;
+        height: 42px;
+      }
+    }
+  }
+
+  main {
+    flex: 1;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+}
+
+/* Tablet devices */
+@media screen and (max-width: 1024px) {
+  .root {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    header .logo {
+      margin: 0 auto;  /* Center logo */
+    }
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+  .root {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 12px;
+
+      .logo {
+        left: 50%;
+
+        span {
+          font-size: 18px;
+        }
+
         img {
-          width: 42px;
-          height: 42px;
+          width: 36px;
+          height: 36px;
         }
       }
     }
-  
-    main {
-      flex: 1;
-      overflow-y: hidden;
-      overflow-x: hidden;
+  }
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .root {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 10px;
+
+      .logo {
+        gap: 4px;
+
+        span {
+          font-size: 16px;
+        }
+
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
     }
   }
+
+/* Very small mobile devices */
+@media screen and (max-width: 320px) {
+  .root {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+  }
+}
