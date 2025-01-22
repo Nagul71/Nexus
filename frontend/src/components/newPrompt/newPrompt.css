@@ -11,6 +11,13 @@ form {
   margin-bottom: 10px;
   padding: 5px;
 }
+.newPrompt{
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
+}
 
 .newForm {
   width: 90%;
@@ -23,6 +30,7 @@ form {
   align-items: center;
   gap: 20px;
   padding: 0px 20px;
+  z-index: 0;
 }
 
 .newForm input {
@@ -79,7 +87,6 @@ form {
 @media screen and (max-width: 768px) {
   .newForm {
     width: 90%;
-    max-width: 350px;
     gap: 10px;
     padding: 0 10px;
     padding-right: 20px;
@@ -124,10 +131,8 @@ form {
 @media screen and (max-width: 480px) {
   .newForm {
     width: 90%;
-    max-width: 150px;
     border-radius: 15px;
     gap: 8px;
-    padding: 0 8px;
   }
 
   .newForm input {
