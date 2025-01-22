@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { ClerkProvider} from '@clerk/clerk-react'
 import { SignedIn } from '@clerk/clerk-react'
 import { UserButton } from '@clerk/clerk-react'
-import {QueryClient,QueryClientProvider} from "@tanstack/react-query"
+import {QueryClient,QueryClientProvider} from 'react-query'
 import { useQuery } from 'react-query'
 
 
