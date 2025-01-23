@@ -17,12 +17,12 @@ function Home() {
       <div className="left">
         <h1>NEXUS AI</h1>
         <h2>Intelligence Evolved, Possibilities Unlimited</h2>
-        <h3>Transform your workflow with enterprise-grade artificial intelligence
-            Experience intelligence that adapts to your enterprise needs
-            Where human ingenuity meets artificial intelligence
-            Elevate your business with next-generation AI solutions
+        <h3 className='text'>Powered by the cutting-edge Gemini API, 
+          Nexus AI delivers intelligent, dynamic, and 
+          seamless conversations. Experience the future of AI-driven interaction with speed, precision, 
+          and adaptability at its core.
         </h3>
-        <Link to='/dashboard'>Get Started</Link>
+        <Link to='/dashboard'>Try Nexus</Link>
       </div>
 
       <div className="right">
