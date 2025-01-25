@@ -27,25 +27,23 @@ Nexus AI is an advanced AI-powered assistant similar to ChatGPT but with unique 
 ---
 
 ## **Pages Overview**
+## **Home Page**
+![Screenshot 2025-01-25 161814](https://github.com/user-attachments/assets/325f409c-519b-4a56-9bc7-a4f244e0c2a2)
 
 ### **Login Page**
-- A clean, minimalistic design featuring a user-friendly login form.  
-- Secure authentication with an option for **password recovery** and **OAuth login** integration.  
-- Responsive layout for seamless access across devices.  
+![Screenshot 2025-01-25 161821](https://github.com/user-attachments/assets/9f4109f8-65b7-4534-8c50-53d54369e9d0)
 
-### **Home Page**
-- Features a **welcome section** highlighting Nexus AI's capabilities.  
-- A sleek **call-to-action button** to start interacting with the AI.  
-- Includes an **introduction video** or carousel showcasing features like text and image-based queries.  
+## **Dashboard Page**
+![Screenshot 2025-01-25 161846](https://github.com/user-attachments/assets/dc378edb-6226-4bb1-afbe-89381c96211f)
 
-### **Dashboard Page**
-- A personalized **user dashboard** with quick access to recent conversations, activity stats, and settings.  
-- **Dynamic panels** to toggle between chat history, preferences, and profile management.  
+## **Chat Page**
+![Screenshot 2025-01-25 162048](https://github.com/user-attachments/assets/b0f5d721-8a86-47ab-9e6c-fcb85d878fef)
 
-### **Chat Page**
-- A real-time, interactive chat interface.  
-- Supports both **text input** and **drag-and-drop image upload** for queries.  
-- Elegant UI with message bubbles, animations, and AI-generated quick reply suggestions.  
+## **Image prompt**
+![Screenshot 2025-01-25 162609](https://github.com/user-attachments/assets/031ee314-9936-4c35-882c-02e3ef232f60)
+
+## **Pricing Page**
+![Screenshot 2025-01-25 162700](https://github.com/user-attachments/assets/eb100e65-7cc0-4d02-8383-8b76c002039c)
 
 ### **Responsive Design**
 - Fully responsive CSS ensures the app is functional and visually appealing on all devices.  
