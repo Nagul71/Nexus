@@ -46,13 +46,9 @@ Nexus AI is an advanced AI-powered assistant similar to ChatGPT but with unique 
 ![Screenshot 2025-01-25 162700](https://github.com/user-attachments/assets/eb100e65-7cc0-4d02-8383-8b76c002039c)
 
 ### **Responsive Design**
-<p float="left">
-  <img src="images/screenshot1.png" width="375" style="margin-right: 10px;" />
-  <img src="images/screenshot2.png" width="375" style="margin-right: 10px;" />
-  <img src="images/screenshot3.png" width="375" />
-</p>
-
-
+- Fully responsive CSS ensures the app is functional and visually appealing on all devices.
+- Designed using Flexbox and CSS Grid for adaptable layouts.
+- Features optimized components like collapsible menus for mobile screens.
 
 ## **Key Benefits**
 
