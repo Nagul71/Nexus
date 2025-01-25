@@ -22,9 +22,8 @@ Nexus AI is an advanced AI-powered assistant similar to ChatGPT but with unique 
 - **Frontend**: React  
 - **Backend**: Node.js, Express.js  
 - **Database**: MongoDB  
-- **API Integration**: Gemini AI API  
-
----
+- **API Integration**: Gemini AI API
+- **Libraries**: Clerk, Imagekit
 
 ## **Pages Overview**
 ## **Home Page**
